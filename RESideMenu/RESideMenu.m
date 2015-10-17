@@ -744,6 +744,9 @@
     }
     [self hideViewController:_leftMenuViewController];
     _leftMenuViewController = leftMenuViewController;
+    if (_leftMenuViewController == nil) {
+        return;
+    }
    
     [self addChildViewController:self.leftMenuViewController];
     self.leftMenuViewController.view.frame = self.view.bounds;
@@ -763,6 +766,9 @@
     }
     [self hideViewController:_rightMenuViewController];
     _rightMenuViewController = rightMenuViewController;
+    if (_rightMenuViewController == nil) {
+        return;
+    }
     
     [self addChildViewController:self.rightMenuViewController];
     self.rightMenuViewController.view.frame = self.view.bounds;
